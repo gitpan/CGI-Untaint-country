@@ -1,6 +1,6 @@
 package CGI::Untaint::to_countrycode;
 use base 'CGI::Untaint::printable';
-use Locale::Country;
+use Locale::Country();
 
 sub is_valid {
     my ( $self ) = @_;
@@ -8,7 +8,7 @@ sub is_valid {
     my $codeset = $self->_codeset;
 
     # name in, code out
-    if ( my $code = country2code( $self->value, $codeset ) )
+    if ( my $code = Locale::Country::country2code( $self->value, $codeset ) )
     {
         return $self->value( $code );
     }

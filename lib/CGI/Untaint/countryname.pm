@@ -1,5 +1,5 @@
 package CGI::Untaint::countryname;
-use Locale::Country;
+use Locale::Country();
 
 use base 'CGI::Untaint::printable';
 
@@ -15,7 +15,7 @@ sub is_valid {
     my ( $self ) = @_;
 
     # name in, name out
-    return country2code( $self->value ) ? 1 : undef;
+    return Locale::Country::country2code( $self->value ) ? 1 : undef;
 }
 
 1;

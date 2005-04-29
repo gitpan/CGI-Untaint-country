@@ -3,21 +3,17 @@ package CGI::Untaint::country;
 use warnings;
 use strict;
 
-use Locale::Country;
+use Locale::Country();
 
 use base 'CGI::Untaint::printable';
 
 =head1 NAME
 
-CGI::Untaint::country - validate a country code
-
-=head1 VERSION
-
-Version 0.01
+CGI::Untaint::country - validate a country code or name
 
 =cut
 
-our $VERSION = 0.1;
+our $VERSION = 0.11;
 
 =head1 SYNOPSIS
 
@@ -47,10 +43,10 @@ sub is_valid {
     my $codeset = $self->_codeset;
     
     # code in, code out
-    return code2country( $self->value, $codeset );
+    return Locale::Country::code2country( $self->value, $codeset );
 }
 
-sub _codeset { LOCALE_CODE_ALPHA_2 }
+sub _codeset { Locale::Constants::LOCALE_CODE_ALPHA_2 }
 
 =head1 AUTHOR
 
