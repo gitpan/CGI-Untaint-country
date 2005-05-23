@@ -11,6 +11,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
         'Locale::Country' => 0,
         'CGI::Untaint' => 0,
+        'Test::CGI::Untaint' => 0,
     },
     add_to_cleanup      => [ 'CGI-Untaint-country-*' ],
     create_makefile_pl  => 'traditional',

@@ -7,6 +7,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'CGI::Untaint' => '0',
                            'Locale::Country' => '0',
+                           'Test::CGI::Untaint' => '0',
                            'Test::More' => '0'
                          },
           'INSTALLDIRS' => 'site',
