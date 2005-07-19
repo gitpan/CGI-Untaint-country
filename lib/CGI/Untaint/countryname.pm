@@ -1,4 +1,6 @@
 package CGI::Untaint::countryname;
+use warnings;
+use strict;
 use Locale::Country();
 
 use base 'CGI::Untaint::printable';

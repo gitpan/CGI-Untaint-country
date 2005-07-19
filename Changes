@@ -1,5 +1,8 @@
 Revision history for CGI-Untaint-country
 
+0.2     Tues 19 July 2005 2:15
+        - added use strict and use warnings to small packages  
+
 0.12    Mon  23 May 2005 16:30
         - added Test/CGI/Untaint to prereqs
 

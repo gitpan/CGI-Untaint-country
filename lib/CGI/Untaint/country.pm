@@ -13,7 +13,7 @@ CGI::Untaint::country - validate a country code or name
 
 =cut
 
-our $VERSION = 0.12;
+our $VERSION = 0.2;
 
 =head1 SYNOPSIS
 
@@ -34,6 +34,14 @@ our $VERSION = 0.12;
 
 Verifies that the submitted value is a valid ISO 3166-1 country code, or a known name.
 See L<Locale::Country|Locale::Country>.
+
+=head1 METHODS
+
+=over 4
+
+=item is_valid
+
+=back
 
 =cut
 
